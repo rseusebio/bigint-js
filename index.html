@@ -120,9 +120,8 @@
                 <span style="float: right"> 100 </span>
                 <br /><br />
             </form>
-
+            <script src="http://orion.lcg.ufrj.br/cwdc/mainPage/LCG.js"></script>
             <!-- 
-            <script src="/cwdc/mainPage/LCG.js"></script>
             <script src="/cwdc/3-javascript/cookies.js"></script>
             -->
             <script type="module">
@@ -156,12 +155,11 @@
                     }
                 }
 
-               console.log("cookie",  getCookie("slidervalue"));
+               document.getElementById("n").value = getCookie("slidervalue"));
                 
                dragAndSave(".container_bi");
 
                getFactors();
-
 
             </script>
         </div>
