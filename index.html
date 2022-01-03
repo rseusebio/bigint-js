@@ -140,7 +140,7 @@
                             factors > Number.MAX_SAFE_INTEGER ? "red" : "green";
                         let bits = factors.toString(2).length;
                         $("#range").html(`(${bits.toString()} bits)`);
-                        for (i of m) {
+                        for (let i of m) {
                             i.style.color = mcolor;
                         }
 
