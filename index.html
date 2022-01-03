@@ -12,6 +12,7 @@
         ></script>
         <script src="my_factorize.js"></script>
         <script src="gcd.js"></script>
+        <script src="utils.js"></script>
         <link
             rel="stylesheet"
             href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css"
@@ -125,12 +126,14 @@
             <script src="/cwdc/3-javascript/cookies.js"></script>
             -->
             <script type="module">
-                // import { LCM } from "./gcd.js";
 
                 window.getFactors = getFactors;
 
                 function getFactors() {
                     let n = $("#n")[0];
+
+                    setCookie("slidervalue", n.valueAsNumber, 1);
+
                     let m = $("mark");
                     if (n) {
                         // using javascript BigInt code to avoid the 53-bit limit
@@ -152,8 +155,14 @@
                         $("#i").html(n.valueAsNumber.toString());
                     }
                 }
-                //dragAndSave(".container_bi");
-                getFactors();
+
+               console.log("cookie",  getCookie("slidervalue"));
+                
+               dragAndSave(".container_bi");
+
+               getFactors();
+
+
             </script>
         </div>
     </body>
