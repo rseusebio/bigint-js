@@ -144,25 +144,7 @@
                             i.style.color = mcolor;
                         }
 
-                        // python runs on the server, and javascript on the browser
-                        /*
-                        $.ajax({
-                            type: "GET",
-                            url: "/cwdc/11-python/factorize.py",
-                            data: factors.toString(),
-                        })
-                            .done(function (response) {
-                                let f = response;
-                                console.log("response: ", factors, f);
-                                $("#prod").html(`${factors} = ${f}`);
-                            })
-                            .fail(function () {
-                                alert("Could not get data");
-                            });
-                        */
                         let f = stringify(factorize(factors));
-
-                        console.log("f: ", typeof factors, factors, f);
 
                         $("#prod").html(`${factors} = ${f}`);
 

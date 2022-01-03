@@ -149,11 +149,3 @@ const stringify = (obj) => {
 
   return arr.join(" x ");
 }
-
-const n  = Number(3099044504245996706400n);
-console.log("test: ", stringify(factorize(n)));
-const res = primeFactor.getFactors(n);
-const r = BigInt(res.reduce((acc, v) => acc * v, 1));
-console.log("test: ", res, r);
-
-//2^5 × 3^3 × 5^2 × 7^2 × 11 × 13 × 17 × 19 × 23 × 29 × 31 × 37 × 41 × 43 × 47
