@@ -120,7 +120,6 @@
                 <span style="float: right"> 100 </span>
                 <br /><br />
             </form>
-            <script src="http://orion.lcg.ufrj.br/cwdc/mainPage/LCG.js"></script>
             <!-- 
             <script src="/cwdc/3-javascript/cookies.js"></script>
             -->
@@ -157,7 +156,11 @@
 
                const savedValue = getCookie("slidervalue");
 
+               console.log("saved value: ", savedValue);
+
                document.getElementById("n").value = savedValue ? savedValue : "50";
+
+               console.log("set cookie: ", document.getElementById("n").value);
                 
                dragAndSave(".container_bi");
 
